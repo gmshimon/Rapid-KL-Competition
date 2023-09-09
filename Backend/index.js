@@ -9,9 +9,13 @@ const port = process.env.PORT || 8080
 app.use(express.json())
 app.use(cors())
 
-mongoose.connect(process.env.DATABASE_URL).then(() => {
-  console.log('Database connected successfully')
-})
+mongoose
+  .connect(
+    'mongodb+srv://Rapid-KL:WxNvVuP7xC167Gs3@cluster0.in8lp.mongodb.net/?retryWrites=true&w=majority'
+  )
+  .then(() => {
+    console.log('Database connected successfully')
+  })
 
 app.get('/', async (req, res, next) => {
   res.send('hello world')
