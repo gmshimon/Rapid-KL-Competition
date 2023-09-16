@@ -7,11 +7,12 @@ import {
   FaShoppingBag,
   FaThList
 } from 'react-icons/fa'
+import { MdFeedback } from 'react-icons/md'
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import './Drawer.css'
 const Drawer = ({ children }) => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(true)
   const toggle = () => setIsOpen(!isOpen)
   const menuItem = [
     {
@@ -40,9 +41,9 @@ const Drawer = ({ children }) => {
       icon: <FaShoppingBag />
     },
     {
-      path: '/productList',
-      name: 'Product List',
-      icon: <FaThList />
+      path: '/feedback',
+      name: 'Feedback',
+      icon: <MdFeedback />
     }
   ]
   return (
@@ -50,10 +51,10 @@ const Drawer = ({ children }) => {
       <div style={{ width: isOpen ? '200px' : '50px' }} className='sidebar1'>
         <div className='top_section1'>
           <h1 style={{ display: isOpen ? 'block' : 'none' }} className='logo1'>
-            logo1
+            Rapid KL
           </h1>
           <div
-            style={{ marginLeft: isOpen ? '50px' : '0px' }}
+            style={{ marginLeft: isOpen ? '40px' : '0px' }}
             className='bars1'
           >
             <FaBars onClick={toggle} />
