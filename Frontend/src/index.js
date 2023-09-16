@@ -9,6 +9,7 @@ function Greeting() {
   return (
     <Container>
       <DashboardCounter />
+      <DashboardTable />
     </Container>
   );
 }
