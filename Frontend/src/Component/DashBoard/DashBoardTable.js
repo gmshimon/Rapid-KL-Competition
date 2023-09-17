@@ -22,8 +22,8 @@ const DashboardTable = () => {
   return (
     <Row>
       <Col className="col-12 col-m-12 col-sm-12">
-        <Card>
-          <Card.Header>
+        <Card className="enquiry-table">
+          <Card.Header className="enquiry-table">
             <h3>Recent Enquiry By Customer</h3>
           </Card.Header>
           <Card.Body className="enquiry-table">

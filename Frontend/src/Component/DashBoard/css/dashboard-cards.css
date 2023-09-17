@@ -259,8 +259,9 @@ body {
   }
 }
 
-.card {
+.card.dashboard-table {
   border-radius: 10px;
+  margin-top: 20px;
   margin-bottom: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   overflow: auto;
@@ -289,7 +290,7 @@ body {
   overflow-x: auto;
 }
 
-.card-header {
+.card-header.enquiry-table {
   padding: 15px 30px;
   border-bottom: 1px solid #d5d3d3;
   position: relative;
@@ -302,6 +303,10 @@ body {
   margin: 0;
 }
 
+.card.enquiry-table {
+  margin-top: 20px;
+}
+
 .card-body {
   font-size: 1.25rem;
 }
@@ -311,18 +316,18 @@ body {
   overflow-x: auto;
 }
 
-table {
+.card-body.enquiry-table table {
   border-collapse: collapse;
   width: 100%;
 }
 
-.card-body table td {
+.card-body.enquiry-table table td {
   border-top: 1px solid #dee2e6;
   border-bottom: none;
   padding: 15px 12px;
 }
 
-.card-body table th {
+.card-body.enquiry-table table th {
   border-top: 1px solid #dee2e6;
   border-bottom: 1px solid #dee2e6;
   padding: 15px 12px;
