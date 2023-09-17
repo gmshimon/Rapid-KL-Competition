@@ -12,6 +12,7 @@ import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import './Drawer.css'
 const Drawer = ({ children }) => {
+  console.log(children)
   const [isOpen, setIsOpen] = useState(true)
   const toggle = () => setIsOpen(!isOpen)
   const menuItem = [
