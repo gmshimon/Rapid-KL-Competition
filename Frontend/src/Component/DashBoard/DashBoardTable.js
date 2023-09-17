@@ -1,9 +1,9 @@
-import Card from 'react-bootstrap/Card';
-import Table from 'react-bootstrap/Table';
-import { customer } from '../../Data/dummyData';
-import { vehicles } from '../../Data/dummyData';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card'
+import Table from 'react-bootstrap/Table'
+import { customer } from '../../Data/dummyData'
+import { vehicles } from '../../Data/dummyData'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 const getTableData = customer.map((customer, index) => {
   return (
@@ -15,18 +15,18 @@ const getTableData = customer.map((customer, index) => {
       <td>{vehicles[index].brand}</td>
       <td>{vehicles[index].problemDesc}</td>
     </tr>
-  );
-});
+  )
+})
 
 const DashboardTable = () => {
   return (
     <Row>
-      <Col className="col-12 col-m-12 col-sm-12">
-        <Card className="enquiry-table">
-          <Card.Header className="enquiry-table">
+      <Col className='col-12 col-m-12 col-sm-12'>
+        <Card>
+          <Card.Header>
             <h3>Recent Enquiry By Customer</h3>
           </Card.Header>
-          <Card.Body className="enquiry-table">
+          <Card.Text>
             <Table>
               <thead>
                 <tr>
@@ -40,11 +40,11 @@ const DashboardTable = () => {
               </thead>
               <tbody>{getTableData}</tbody>
             </Table>
-          </Card.Body>
+          </Card.Text>
         </Card>
       </Col>
     </Row>
-  );
-};
+  )
+}
 
-export default DashboardTable;
+export default DashboardTable
