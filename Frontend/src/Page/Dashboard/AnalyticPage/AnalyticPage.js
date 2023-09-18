@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import AirPressure from '../../../Component/Analytics/AirPressure/AirPressure'
 import CoolantTemp from '../../../Component/Analytics/CoolantTemp/CoolantTemp'
 import TotalFuelUsed from '../../../Component/Analytics/TotalFuelUsed/TotalFuelUsed'
+import AnalyticHeader from '../../../Component/Analytics/AnalyticHeader/AnalyticHeader'
 
 const AnalyticPage = () => {
   const { id } = useParams()
@@ -19,10 +20,21 @@ const AnalyticPage = () => {
 
   return (
     <div>
-      <LineChart data={busData} />
-      <AirPressure data={busData} />
-      <CoolantTemp data={busData} />
-      <TotalFuelUsed data={busData} />
+      <AnalyticHeader data={busData} />
+      <div className='row'>
+        <div className='col-6'>
+          <LineChart data={busData} />
+        </div>
+        <div className='col-6'>
+          <AirPressure data={busData} />
+        </div>
+        <div className='col-6'>
+          <CoolantTemp data={busData} />
+        </div>
+        <div className='col-6'>
+          <TotalFuelUsed data={busData} />
+        </div>
+      </div>
     </div>
   )
 }

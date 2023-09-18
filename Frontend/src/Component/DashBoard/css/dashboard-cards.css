@@ -21,6 +21,14 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+.counter1 {
+  padding: 16px;
+  text-align: center;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
 .bg-customer {
   background: #4834d4;
 }
@@ -34,7 +42,7 @@ body {
 }
 
 .bg-feedback {
-  background: #eb4d4b;
+  background: #ea706e;
 }
 
 .row {
@@ -276,7 +284,7 @@ body {
   margin-bottom: 10px;
 }
 
-.card-body > svg:hover {
+.card-body>svg:hover {
   cursor: pointer;
 }
 
