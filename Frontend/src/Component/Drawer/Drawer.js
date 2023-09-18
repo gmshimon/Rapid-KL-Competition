@@ -5,7 +5,7 @@ import {
   FaRegChartBar,
   FaCommentAlt,
   FaShoppingBag,
-  FaThList
+  FaTools
 } from 'react-icons/fa'
 import { MdFeedback } from 'react-icons/md'
 import React, { useState } from 'react'
@@ -22,25 +22,26 @@ const Drawer = ({ children }) => {
       icon: <FaTh />
     },
     {
-      path: '/about',
-      name: 'About',
-      icon: <FaUserAlt />
+      path: '/parts',
+      name: 'Inventory',
+      icon: <FaTools />
     },
-    {
-      path: '/analytics',
-      name: 'Analytics',
-      icon: <FaRegChartBar />
-    },
-    {
-      path: '/comment',
-      name: 'Comment',
-      icon: <FaCommentAlt />
-    },
-    {
-      path: '/product',
-      name: 'Product',
-      icon: <FaShoppingBag />
-    },
+    // {
+    //   path: '/analytics',
+    //   name: 'Analytics',
+    //   icon: <FaRegChartBar />
+    // },
+
+    // {
+    //   path: '/comment',
+    //   name: 'Comment',
+    //   icon: <FaCommentAlt />
+    // },
+    // {
+    //   path: '/product',
+    //   name: 'Product',
+    //   icon: <FaShoppingBag />
+    // },
     {
       path: '/feedback',
       name: 'Feedback',

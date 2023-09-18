@@ -1,4 +1,3 @@
-
 import Card from 'react-bootstrap/Card'
 import Table from 'react-bootstrap/Table'
 import Row from 'react-bootstrap/Row'
@@ -18,19 +17,19 @@ const DashboardTable = () => {
   const [searchText, setSearchText] = useState('')
   useEffect(() => {
     fetch('Bus_data.json')
-      .then((res) => res.json())
-      .then((data) => setData(data));
-  }, []);
+      .then(res => res.json())
+      .then(data => setData(data))
+  }, [])
 
-  const handleBusDashBoard = (id) => {
-    setSelectedId(id);
-    setShowModal(true);
+  const handleBusDashBoard = id => {
+    setSelectedId(id)
+    setShowModal(true)
     // console.log(id);
-  };
+  }
 
   const handleCloseModal = () => {
-    setShowModal(false);
-  };
+    setShowModal(false)
+  }
 
   const handleSearch = () => {
     const buses = busData
@@ -72,16 +71,14 @@ const DashboardTable = () => {
         </div>
       </div>
       <Row>
-
         <Col className='col-12 col-m-12 col-sm-12'>
           <Card className='enquiry-table' style={{ height: '500px' }}>
             <Card.Header className='enquiry-table'>
               <h3>Bus Details</h3>
-
             </Card.Header>
-            <Card.Body className="enquiry-table">
+            <Card.Body className='enquiry-table'>
               <Table>
-                <thead className="each-row">
+                <thead className='each-row'>
                   <tr>
                     <th>#</th>
                     <th>bus_id</th>
@@ -91,30 +88,87 @@ const DashboardTable = () => {
                   </tr>
                 </thead>
                 <tbody>
-
-
                   {busData?.length > 0 ? (
-                    busData.map((bus, index) => (
-                      <tr
-                        onClick={() => handleBusDashBoard(index)}
-                        key={index}
-                        className={`table-row ${
-                          (bus.Grade === 0 && 'table-success') ||
-                          (bus.Grade === 1 && 'table-warning') ||
-                          (bus.Grade === 2 && 'table-danger')
-                        }`}
-                      >
-                        <td>{index + 1}</td>
-                        <td>{bus.bus_id}</td>
-                        <td>{bus.depot_nm}</td>
-                        <td>{bus.model_num}</td>
-                        <td>
-                          {(bus.Grade === 0 && 'A') ||
-                            (bus.Grade === 1 && 'B') ||
-                            (bus.Grade === 2 && 'C')}
-                        </td>
-                      </tr>
-                    ))
+                    busData.map(
+                      (bus, index) =>
+                        bus.Grade === 2 && (
+                          <tr
+                            onClick={() => handleBusDashBoard(index)}
+                            key={index}
+                            className={`table-row ${
+                              (bus.Grade === 0 && 'table-success') ||
+                              (bus.Grade === 1 && 'table-warning') ||
+                              (bus.Grade === 2 && 'table-danger')
+                            }`}
+                          >
+                            <td>{index + 1}</td>
+                            <td>{bus.bus_id}</td>
+                            <td>{bus.depot_nm}</td>
+                            <td>{bus.model_num}</td>
+                            <td>
+                              {(bus.Grade === 0 && 'A') ||
+                                (bus.Grade === 1 && 'B') ||
+                                (bus.Grade === 2 && 'C')}
+                            </td>
+                          </tr>
+                        )
+                    )
+                  ) : (
+                    <p>Zero Result Found</p>
+                  )}
+                  {busData?.length > 0 ? (
+                    busData.map(
+                      (bus, index) =>
+                        bus.Grade === 1 && (
+                          <tr
+                            onClick={() => handleBusDashBoard(index)}
+                            key={index}
+                            className={`table-row ${
+                              (bus.Grade === 0 && 'table-success') ||
+                              (bus.Grade === 1 && 'table-warning') ||
+                              (bus.Grade === 2 && 'table-danger')
+                            }`}
+                          >
+                            <td>{index + 1}</td>
+                            <td>{bus.bus_id}</td>
+                            <td>{bus.depot_nm}</td>
+                            <td>{bus.model_num}</td>
+                            <td>
+                              {(bus.Grade === 0 && 'A') ||
+                                (bus.Grade === 1 && 'B') ||
+                                (bus.Grade === 2 && 'C')}
+                            </td>
+                          </tr>
+                        )
+                    )
+                  ) : (
+                    <p>Zero Result Found</p>
+                  )}
+                  {busData?.length > 0 ? (
+                    busData.map(
+                      (bus, index) =>
+                        bus.Grade === 0 && (
+                          <tr
+                            onClick={() => handleBusDashBoard(index)}
+                            key={index}
+                            className={`table-row ${
+                              (bus.Grade === 0 && 'table-success') ||
+                              (bus.Grade === 1 && 'table-warning') ||
+                              (bus.Grade === 2 && 'table-danger')
+                            }`}
+                          >
+                            <td>{index + 1}</td>
+                            <td>{bus.bus_id}</td>
+                            <td>{bus.depot_nm}</td>
+                            <td>{bus.model_num}</td>
+                            <td>
+                              {(bus.Grade === 0 && 'A') ||
+                                (bus.Grade === 1 && 'B') ||
+                                (bus.Grade === 2 && 'C')}
+                            </td>
+                          </tr>
+                        )
+                    )
                   ) : (
                     <p>Zero Result Found</p>
                   )}
@@ -127,9 +181,9 @@ const DashboardTable = () => {
       <Modal
         show={showModal}
         onHide={handleCloseModal}
-        backdrop="static"
+        backdrop='static'
         keyboard={false}
-        dialogClassName="modal-90w"
+        dialogClassName='modal-90w'
       >
         <Modal.Header closeButton>
           <Modal.Title>Bus Analytics</Modal.Title>
@@ -140,13 +194,13 @@ const DashboardTable = () => {
           )}
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseModal}>
+          <Button variant='secondary' onClick={handleCloseModal}>
             Close
           </Button>
         </Modal.Footer>
       </Modal>
     </>
-  );
-};
+  )
+}
 
-export default DashboardTable;
+export default DashboardTable
