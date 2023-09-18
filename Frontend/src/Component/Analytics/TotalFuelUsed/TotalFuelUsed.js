@@ -11,7 +11,10 @@ const TotalFuelUsed = ({ data }) => {
   const options = {
     chart: {
       height: 350,
-      type: 'bar'
+      type: 'bar',
+      toolbar: {
+        show: false // Hide the download menu buttons
+      }
     },
     plotOptions: {
       bar: {
@@ -31,10 +34,6 @@ const TotalFuelUsed = ({ data }) => {
         fontSize: '12px',
         colors: ['#304758']
       }
-    },
-    title: {
-      text: 'Engine Total Fuel SPN_250',
-      align: 'center'
     },
     xaxis: {
       categories: ['April', 'February', 'January', 'June', 'March', 'May'],

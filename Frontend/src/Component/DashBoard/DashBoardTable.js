@@ -88,7 +88,7 @@ const DashboardTable = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {busData.length > 0 ? (
+                  {busData?.length > 0 ? (
                     busData.map((bus, index) => (
                       <tr
                         onClick={() => handleBusDashBoard(index)}

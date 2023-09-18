@@ -4,6 +4,8 @@ import CoolantTemp from '../../../Component/Analytics/CoolantTemp/CoolantTemp'
 import TotalFuelUsed from '../../../Component/Analytics/TotalFuelUsed/TotalFuelUsed'
 import AnalyticHeader from '../../../Component/Analytics/AnalyticHeader/AnalyticHeader'
 import EngineSpeedPercent from '../../../Component/Analytics/EngineSpeedPercent/EngineSpeedPercent'
+import EngineTorque from '../../../Component/Analytics/EngineTorque/EngineTorque'
+import TotalHoursOpt from '../../../Component/Analytics/TotalHoursOpt/TotalHoursOpt'
 
 const AnalyticPage = ({ id, data }) => {
   const [busData, setData] = useState(data)
@@ -21,17 +23,20 @@ const AnalyticPage = ({ id, data }) => {
     <div>
       <AnalyticHeader data={busData} />
       <div className='row'>
-        <div className='col-6'>
+        <div className='col-4 col-md-6'>
           <LineChart data={busData} />
         </div>
-        <div className='col-6'>
+        <div className='col-4 col-md-6'>
           <EngineSpeedPercent data={busData} />
         </div>
-        <div className='col-6'>
+        <div className='col-4 col-md-6'>
           <CoolantTemp data={busData} />
         </div>
-        <div className='col-6'>
+        <div className='col-6 col-md-6'>
           <TotalFuelUsed data={busData} />
+        </div>
+        <div className='col-6 col-md-6'>
+          <TotalHoursOpt data={busData} />
         </div>
       </div>
     </div>

@@ -13,6 +13,9 @@ const CoolantTemp = ({ data }) => {
       height: 350,
       zoom: {
         enabled: false
+      },
+      toolbar: {
+        show: false // Hide the download menu buttons
       }
     },
     dataLabels: {
