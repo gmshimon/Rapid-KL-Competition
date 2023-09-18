@@ -4,7 +4,7 @@ import Chart from 'react-apexcharts'
 const TotalFuelUsed = ({ data }) => {
   const series = [
     {
-      name: 'Engine Total Fuel Used',
+      name: 'Engine Total Fuel Used SPN_250',
       data: data.SPN_250
     }
   ]
@@ -33,7 +33,7 @@ const TotalFuelUsed = ({ data }) => {
       }
     },
     title: {
-      text: 'Engine Total Fuel Used',
+      text: 'Engine Total Fuel SPN_250',
       align: 'center'
     },
     xaxis: {

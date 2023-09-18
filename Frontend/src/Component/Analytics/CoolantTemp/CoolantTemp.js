@@ -23,7 +23,7 @@ const CoolantTemp = ({ data }) => {
     },
 
     title: {
-      text: 'Engine Coolant Temperature',
+      text: 'Engine Coolant Temperature SPN_110',
       align: 'center'
     },
     labels: 'SAD',

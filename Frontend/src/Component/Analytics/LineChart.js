@@ -4,8 +4,8 @@ import Chart from 'react-apexcharts'
 const LineChart = ({ data }) => {
   const series = [
     {
-      name: 'Fuel Level 1',
-      data: data.SPN_96
+      name: 'Engine Instantaneous Fuel Economy',
+      data: data.SPN_184
     }
   ]
   const options = {
@@ -38,7 +38,7 @@ const LineChart = ({ data }) => {
       size: 5
     },
     title: {
-      text: 'Total Fuel Level 1',
+      text: 'Engine Instantaneous Fuel Economy (SPN_184)',
       align: 'center'
     },
     grid: {
@@ -55,7 +55,7 @@ const LineChart = ({ data }) => {
     },
     yaxis: {
       title: {
-        text: 'Fuel Level 1'
+        text: 'Engine Fuel Economy'
       }
     },
     legend: {
