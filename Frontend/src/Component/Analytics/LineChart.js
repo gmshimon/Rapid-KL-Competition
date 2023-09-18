@@ -48,7 +48,7 @@ const LineChart = ({ data }) => {
       }
     },
     xaxis: {
-      categories: ['April', 'February', 'January', 'June', 'March', 'May'], // takes an array which will be repeated on columns
+      categories: ['January', 'February', 'March', 'April', 'May', 'June'], // takes an array which will be repeated on columns
       title: {
         text: 'Month'
       }

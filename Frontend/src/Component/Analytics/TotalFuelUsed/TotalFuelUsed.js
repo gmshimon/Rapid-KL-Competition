@@ -36,7 +36,7 @@ const TotalFuelUsed = ({ data }) => {
       }
     },
     xaxis: {
-      categories: ['April', 'February', 'January', 'June', 'March', 'May'],
+      categories: ['January', 'February', 'March', 'April', 'May', 'June'],
       position: 'bottom',
       axisBorder: {
         show: true

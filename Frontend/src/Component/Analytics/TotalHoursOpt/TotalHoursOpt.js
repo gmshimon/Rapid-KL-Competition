@@ -25,7 +25,7 @@ const TotalHoursOpt = ({ data }) => {
       align: 'center'
     },
     xaxis: {
-      categories: ['April', 'February', 'January', 'June', 'March', 'May']
+      categories: ['January', 'February', 'March', 'April', 'May', 'June']
     }
   }
   return (

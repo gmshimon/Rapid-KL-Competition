@@ -56,7 +56,7 @@ const FuelRate = ({ data }) => {
       categories: [0, 1, 2, 3, 4, 5], // Numeric categories
       labels: {
         formatter: function (val) {
-          const months = ['Apr', 'Feb', 'Jan', 'Jun', 'Mar', 'May']
+          const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
           return months[val] // Display the month name corresponding to the category
         }
       },
