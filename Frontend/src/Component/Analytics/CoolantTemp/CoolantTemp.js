@@ -13,6 +13,9 @@ const CoolantTemp = ({ data }) => {
       height: 350,
       zoom: {
         enabled: false
+      },
+      toolbar: {
+        show: false // Hide the download menu buttons
       }
     },
     dataLabels: {
@@ -23,7 +26,7 @@ const CoolantTemp = ({ data }) => {
     },
 
     title: {
-      text: 'Engine Coolant Temperature',
+      text: 'Engine Coolant Temperature SPN_110',
       align: 'center'
     },
     labels: 'SAD',

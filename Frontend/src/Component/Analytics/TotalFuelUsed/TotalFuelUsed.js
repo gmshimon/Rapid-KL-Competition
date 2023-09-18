@@ -4,14 +4,17 @@ import Chart from 'react-apexcharts'
 const TotalFuelUsed = ({ data }) => {
   const series = [
     {
-      name: 'Engine Total Fuel Used',
+      name: 'Engine Total Fuel Used SPN_250',
       data: data.SPN_250
     }
   ]
   const options = {
     chart: {
       height: 350,
-      type: 'bar'
+      type: 'bar',
+      toolbar: {
+        show: false // Hide the download menu buttons
+      }
     },
     plotOptions: {
       bar: {
@@ -31,10 +34,6 @@ const TotalFuelUsed = ({ data }) => {
         fontSize: '12px',
         colors: ['#304758']
       }
-    },
-    title: {
-      text: 'Engine Total Fuel Used',
-      align: 'center'
     },
     xaxis: {
       categories: ['April', 'February', 'January', 'June', 'March', 'May'],

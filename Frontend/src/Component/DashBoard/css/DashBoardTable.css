@@ -1,6 +1,6 @@
 .table-row {
   cursor: pointer;
-  background-color: blue;
+  background-color: blue !important;
 }
 
 .modal-90w {
