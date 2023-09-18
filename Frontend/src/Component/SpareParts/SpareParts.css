@@ -1,0 +1,8 @@
+.spare-parts-styling {
+  color: rgb(0, 113, 133);
+  cursor: pointer;
+}
+
+.spare-parts-styling:hover {
+  color: #c7511f;
+}
