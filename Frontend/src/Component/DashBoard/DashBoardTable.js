@@ -47,7 +47,7 @@ const DashboardTable = () => {
   return (
     <>
       <div className="d-flex justify-content-center">
-        <div className="input-group mb-3 mt-3 w-50">
+        <div className="input-group mb-0 mt-3 col-6 col-m-7 col-sm-6">
           <input
             onChange={(e) => setSearchText(e.target.value)}
             type="text"
@@ -104,7 +104,7 @@ const DashboardTable = () => {
             <Card.Body className="enquiry-table">
               <Table>
                 <thead className="each-row">
-                  <tr id="enquiry-header">
+                  <tr>
                     <th>#</th>
                     <th>bus_id</th>
                     <th>depot_nm</th>
