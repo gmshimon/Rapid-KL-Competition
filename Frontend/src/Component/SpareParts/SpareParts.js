@@ -10,37 +10,7 @@ import Button from 'react-bootstrap/Button';
 import Overlay from 'react-bootstrap/Overlay';
 import Popover from 'react-bootstrap/Popover';
 import './SpareParts.css';
-
-const CostBreakdownPopover = ({
-  show,
-  target,
-  costsPopoverData,
-  partsPopoverData,
-}) => (
-  <Overlay show={show} target={target} placement="bottom">
-    <Popover
-      id="popover-contained"
-      style={{ fontSize: '17px', width: '300px' }}
-    >
-      <Popover.Header as="h3" style={{ fontSize: '20px' }}>
-        Cost Breakdown
-      </Popover.Header>
-      <Popover.Body>
-        {costsPopoverData.map((cost, i) => (
-          <div key={i}>
-            {partsPopoverData[i]}: {cost} MYR
-          </div>
-        ))}
-        <hr />
-        <strong>
-          {'Total Price: '}
-          {costsPopoverData.reduce((partialSum, a) => partialSum + a, 0) +
-            ' MYR'}
-        </strong>
-      </Popover.Body>
-    </Popover>
-  </Overlay>
-);
+import CloseButton from 'react-bootstrap/esm/CloseButton';
 
 const SpareParts = () => {
   const [busData, setData] = useState([]);
@@ -57,6 +27,51 @@ const SpareParts = () => {
     setCostsPopoverData(partsCost);
     setPartsPopoverData(partsName);
   };
+
+  const handleClickButton = () => {
+    setShow(!show);
+  };
+
+  const CostBreakdownPopover = ({
+    show,
+    target,
+    costsPopoverData,
+    partsPopoverData,
+  }) => (
+    <Overlay show={show} target={target} placement="bottom">
+      <Popover
+        id="popover-contained"
+        style={{ fontSize: '17px', width: '300px' }}
+      >
+        <Popover.Header as="h3" style={{ fontSize: '20px' }}>
+          <span>Cost Breakdown</span>
+          <span></span>
+          <CloseButton
+            onClick={handleClickButton}
+            style={{
+              padding: 0,
+              position: 'absolute',
+              top: '10px',
+              right: '8px',
+            }}
+          ></CloseButton>
+        </Popover.Header>
+        <Popover.Body>
+          {costsPopoverData.map((cost, i) => (
+            <div key={i}>
+              {partsPopoverData[i]}: {cost} MYR
+            </div>
+          ))}
+          <hr />
+          <strong>
+            {'Total Price: '}
+            {costsPopoverData.reduce((partialSum, a) => partialSum + a, 0) +
+              ' MYR'}
+          </strong>
+        </Popover.Body>
+      </Popover>
+    </Overlay>
+  );
 
   useEffect(() => {
     fetch('Bus_data.json')
