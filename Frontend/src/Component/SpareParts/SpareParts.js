@@ -11,6 +11,8 @@ import Overlay from 'react-bootstrap/Overlay';
 import Popover from 'react-bootstrap/Popover';
 import './SpareParts.css';
 import CloseButton from 'react-bootstrap/esm/CloseButton';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const SpareParts = () => {
   const [busData, setData] = useState([]);
@@ -45,7 +47,6 @@ const SpareParts = () => {
       >
         <Popover.Header as="h3" style={{ fontSize: '20px' }}>
           <span>Cost Breakdown</span>
-          <span></span>
           <CloseButton
             onClick={handleClickButton}
             style={{
@@ -146,6 +147,16 @@ const SpareParts = () => {
                             (partialSum, a) => partialSum + a,
                             0
                           ) + ' MYR'}
+                        <FontAwesomeIcon
+                          icon={faChevronDown}
+                          style={{
+                            padding: 0,
+                            margin: 0,
+                            position: 'relative',
+                            left: '8px',
+                            fontSize: '12px',
+                          }}
+                        />
                       </span>
                     </td>
                     <td className="align-middle">
