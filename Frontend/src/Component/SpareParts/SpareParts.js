@@ -96,11 +96,11 @@ const SpareParts = () => {
   return (
     <Row>
       <Col className="col-12 col-m-12 col-sm-12">
-        <Card className="enquiry-table" style={{ height: '91vh' }}>
-          <Card.Header className="enquiry-table" style={{ color: 'black' }}>
+        <Card className="parts-table" style={{ height: '91vh' }}>
+          <Card.Header className="parts-table" style={{ color: 'black' }}>
             <h3>Spare Parts Management</h3>
           </Card.Header>
-          <Card.Body className="enquiry-table">
+          <Card.Body className="parts-table">
             <Table>
               <thead className="each-row">
                 <tr>
@@ -159,7 +159,7 @@ const SpareParts = () => {
                         />
                       </span>
                     </td>
-                    <td className="align-middle">
+                    <td className="align-middle" style={{ width: '15%' }}>
                       <Button
                         variant="success"
                         size="lg"
