@@ -1,42 +1,45 @@
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Card from 'react-bootstrap/Card'
-import './css/dashboard-cards.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
+import './css/dashboard-cards.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faBoxesStacked,
   faBus,
   faToolbox,
-  faUsers
-} from '@fortawesome/free-solid-svg-icons'
-import { faHatCowboy } from '@fortawesome/free-solid-svg-icons'
-import { faSpinner } from '@fortawesome/free-solid-svg-icons'
-import { faComments } from '@fortawesome/free-solid-svg-icons'
-import { useEffect, useState } from 'react'
+} from '@fortawesome/free-solid-svg-icons';
+import { faComments } from '@fortawesome/free-solid-svg-icons';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function DashboardCounter () {
-  const [busData, setData] = useState([])
-  let total = 0
+function DashboardCounter() {
+  const [busData, setData] = useState([]);
+  let total = 0;
   useEffect(() => {
     fetch('/Bus_data.json')
-      .then(res => res.json())
-      .then(data => {
-        data.forEach(element => {
-          if (element.Grade === 2) total++
-        })
-        setData(total)
-      })
-  }, [])
-  const totalCustomer = 297
-  const totolMaintenance = 130
-  const WaitingForParts = 59
-  const totalFeedback = 1
+      .then((res) => res.json())
+      .then((data) => {
+        data.forEach((element) => {
+          if (element.Grade === 2) total++;
+        });
+        setData(total);
+      });
+  }, []);
+
+  const navigate = useNavigate();
+  const totalCustomer = 297;
+  const WaitingForParts = 59;
+  const totalFeedback = 1;
+
+  const handlePartsCardClick = () => {
+    navigate('/parts');
+  };
+
   return (
-    <div className='counter-cards'>
+    <div className="counter-cards">
       <Row>
-        <Col className='col-3 col-m-6 col-sm-6'>
-          <Card className='counter bg-customer'>
+        <Col className="col-3 col-m-6 col-sm-6">
+          <Card className="counter bg-customer">
             <Card.Body>
               <FontAwesomeIcon icon={faBus} />
               <Card.Title>{totalCustomer}</Card.Title>
@@ -44,8 +47,8 @@ function DashboardCounter () {
             </Card.Body>
           </Card>
         </Col>
-        <Col className='col-3 col-m-6 col-sm-6'>
-          <Card className='counter bg-feedback'>
+        <Col className="col-3 col-m-6 col-sm-6">
+          <Card className="counter bg-feedback">
             <Card.Body>
               <FontAwesomeIcon icon={faToolbox} />
               <Card.Title>{busData}</Card.Title>
@@ -53,8 +56,8 @@ function DashboardCounter () {
             </Card.Body>
           </Card>
         </Col>
-        <Col className='col-3 col-m-6 col-sm-6'>
-          <Card className='counter bg-enquiry'>
+        <Col className="col-3 col-m-6 col-sm-6">
+          <Card className="counter bg-enquiry" onClick={handlePartsCardClick}>
             <Card.Body>
               <FontAwesomeIcon icon={faBoxesStacked} />
               <Card.Title>{WaitingForParts}</Card.Title>
@@ -62,8 +65,8 @@ function DashboardCounter () {
             </Card.Body>
           </Card>
         </Col>
-        <Col className='col-3 col-m-6 col-sm-6'>
-          <Card className='counter bg-mechanic'>
+        <Col className="col-3 col-m-6 col-sm-6">
+          <Card className="counter bg-mechanic">
             <Card.Body>
               <FontAwesomeIcon icon={faComments} />
               <Card.Title>{totalFeedback}</Card.Title>
@@ -73,7 +76,7 @@ function DashboardCounter () {
         </Col>
       </Row>
     </div>
-  )
+  );
 }
 
-export default DashboardCounter
+export default DashboardCounter;

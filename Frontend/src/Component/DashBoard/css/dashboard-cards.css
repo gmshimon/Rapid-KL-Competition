@@ -19,6 +19,7 @@ body {
   color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  min-height: 100%;
 }
 
 .counter1 {
@@ -284,7 +285,7 @@ body {
   margin-bottom: 10px;
 }
 
-.card-body>svg:hover {
+.card-body {
   cursor: pointer;
 }
 
@@ -320,27 +321,4 @@ body {
 
 .card-body {
   font-size: 1.25rem;
-}
-
-.card-body.enquiry-table {
-  padding: 20px;
-  overflow-x: auto;
-}
-
-.card-body.enquiry-table table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.card-body.enquiry-table table td {
-  border-top: 1px solid #dee2e6;
-  border-bottom: none;
-  padding: 15px 12px;
-}
-
-.card-body.enquiry-table table th {
-  border-top: 1px solid #dee2e6;
-  border-bottom: 1px solid #dee2e6;
-  padding: 15px 12px;
-  text-align: left;
 }

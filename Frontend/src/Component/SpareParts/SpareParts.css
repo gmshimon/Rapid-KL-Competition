@@ -6,3 +6,56 @@
 .spare-parts-styling:hover {
   color: #c7511f;
 }
+
+.card-header.enquiry-table {
+  padding: 15px 30px;
+  border-bottom: 1px solid #d5d3d3;
+  position: relative;
+  color: red;
+  text-align: center;
+  background-color: #fff;
+}
+
+.card-header.parts-table {
+  padding: 15px 30px;
+  border-bottom: 1px solid #d5d3d3;
+  position: relative;
+  color: red;
+  text-align: center;
+  background-color: #fff;
+}
+
+.card-header h3 {
+  margin: 0;
+}
+
+.card.parts-table {
+  margin-top: 20px;
+}
+
+.card-body {
+  font-size: 1.25rem;
+}
+
+.card-body.parts-table {
+  padding: 20px;
+  overflow-x: auto;
+}
+
+.card-body.parts-table table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.card-body.parts-table table td {
+  border-top: 1px solid #dee2e6;
+  border-bottom: none;
+  padding: 15px 12px;
+}
+
+.card-body.parts-table table th {
+  border-top: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
+  padding: 15px 12px;
+  text-align: left;
+}
