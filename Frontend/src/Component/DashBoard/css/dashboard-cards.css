@@ -321,31 +321,3 @@ body {
 .card-body {
   font-size: 1.25rem;
 }
-
-.card-body.enquiry-table {
-  padding: 20px;
-  overflow-x: auto;
-}
-
-.card-body.enquiry-table table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.card-body.enquiry-table table td {
-  border-top: 1px solid #404040;
-  border-bottom: none;
-  padding: 15px 12px;
-}
-
-.card-body.enquiry-table table tr:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  transition: box-shadow 0.3s ease;
-}
-
-.card-body.enquiry-table table th {
-  border-top: 1px solid #dee2e6;
-  border-bottom: 1px solid #404040;
-  padding: 15px 12px;
-  text-align: left;
-}

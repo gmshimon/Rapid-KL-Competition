@@ -52,7 +52,7 @@ const DashboardTable = () => {
             onChange={(e) => setSearchText(e.target.value)}
             type="text"
             className="form-control"
-            placeholder="Search by Bus id"
+            placeholder="Search by Bus ID"
             aria-label="Recipient's username"
             aria-describedby="button-addon2"
           />
@@ -70,9 +70,34 @@ const DashboardTable = () => {
           </button>
         </div>
       </div>
+
       <Row>
         <Col className="col-12 col-m-12 col-sm-12">
           <Card className="enquiry-table" style={{ height: '500px' }}>
+            <div className="legend">
+              <ul>
+                <li>
+                  <span
+                    className="legend-heading"
+                    style={{ fontWeight: 'bold' }}
+                  >
+                    Engine Status:
+                  </span>
+                </li>
+                <li>
+                  <span className="legend-bullet legend-red"></span> Critical
+                  Maintenance Needed
+                </li>
+                <li>
+                  <span className="legend-bullet legend-yellow"></span>{' '}
+                  Maintenance Suggested
+                </li>
+                <li>
+                  <span className="legend-bullet legend-green"></span> Engine in
+                  Good Health
+                </li>
+              </ul>
+            </div>
             <Card.Header className="enquiry-table">
               <h3>Bus Details</h3>
             </Card.Header>
