@@ -87,6 +87,20 @@ main {
     padding: '0';
     margin-right: 10px;
   }
+
+  .nav-link:first-child {
+    border-top: 1px solid gray;
+  }
+
+  .nav-link {
+    padding: 20px 20px;
+    text-align: center;
+    border-bottom: 1px solid gray;
+  }
+
+  .nav-link:active {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
 }
 
 @media (min-width: 768px) {
