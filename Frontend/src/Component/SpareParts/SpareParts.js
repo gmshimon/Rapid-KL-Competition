@@ -159,7 +159,7 @@ const SpareParts = () => {
                         />
                       </span>
                     </td>
-                    <td className="align-middle" style={{ width: '15%' }}>
+                    <td className="align-middle col-2">
                       <Button
                         variant="success"
                         size="lg"

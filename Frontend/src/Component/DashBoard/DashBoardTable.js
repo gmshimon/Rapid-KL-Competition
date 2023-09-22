@@ -47,7 +47,7 @@ const DashboardTable = () => {
   return (
     <>
       <div className="d-flex justify-content-center">
-        <div className="input-group mb-0 mt-3 col-6 col-m-7 col-sm-6">
+        <div className="input-group mb-3 mt-3 col-6 col-m-7 col-sm-6">
           <input
             onChange={(e) => setSearchText(e.target.value)}
             type="text"
