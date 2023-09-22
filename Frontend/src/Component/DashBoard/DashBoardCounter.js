@@ -10,6 +10,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faComments } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function DashboardCounter() {
   const [busData, setData] = useState([]);
@@ -24,9 +25,16 @@ function DashboardCounter() {
         setData(total);
       });
   }, []);
+
+  const navigate = useNavigate();
   const totalCustomer = 297;
   const WaitingForParts = 59;
   const totalFeedback = 1;
+
+  const handlePartsCardClick = () => {
+    navigate('/parts');
+  };
+
   return (
     <div className="counter-cards">
       <Row>
@@ -49,7 +57,7 @@ function DashboardCounter() {
           </Card>
         </Col>
         <Col className="col-3 col-m-6 col-sm-6">
-          <Card className="counter bg-enquiry">
+          <Card className="counter bg-enquiry" onClick={handlePartsCardClick}>
             <Card.Body>
               <FontAwesomeIcon icon={faBoxesStacked} />
               <Card.Title>{WaitingForParts}</Card.Title>

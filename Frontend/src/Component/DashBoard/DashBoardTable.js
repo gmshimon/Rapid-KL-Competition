@@ -32,7 +32,7 @@ const DashboardTable = () => {
   };
 
   const handleSearch = () => {
-    const buses = busData;
+    // const buses = busData;
     if (searchText.length > 0) {
       const result = busData.filter(
         (bus) => bus.bus_id.toLowerCase() === searchText.toLowerCase()
